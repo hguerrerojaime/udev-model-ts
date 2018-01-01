@@ -1,0 +1,38 @@
+{
+  "name": "udev-model-ts",
+  "version": "1.0.0",
+  "description": "Typescript support for udev model, using nodejs-model https://www.npmjs.com/package/nodejs-model",
+  "main": "index.js",
+  "scripts": {
+    "tslint": "node_modules/.bin/tslint \"src/**/*.ts\" -e \"**/test/**\" -p tslint.json",
+    "tsc": "node_modules/.bin/tsc",
+    "build": "npm run tslint && npm run tsc && npm test",
+    "test": "node_modules/.bin/mocha -r ts-node/register test/**/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hguerrerojaime/udev-model-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hguerrerojaime/udev-model-ts/issues"
+  },
+  "homepage": "https://github.com/hguerrerojaime/udev-model-ts#readme",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "nodejs-model": "^0.1.6",
+    "reflect-metadata": "^0.1.10"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.10",
+    "@types/mocha": "^2.2.45",
+    "@types/node": "^8.5.2",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.0.1",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  }
+}
