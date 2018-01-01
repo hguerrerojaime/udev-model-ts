@@ -25,7 +25,7 @@ function initializeValidations(target) {
 
 function enhanceTarget(target) {
 
-  return class extends target {
+  return class extends (target as { new(): any;}) {
 
     constructor(attrs = {}) {
       super();
@@ -61,7 +61,7 @@ function createModel(target) {
   const model = require('nodejs-model')(target.name);
   const attrs = target.attrs;
   for (const attr in attrs) {
-    let options = typeof attrs[attr] === "object" ? Object.assign({},attrs[attr]) : {};
+    const options = typeof attrs[attr] === "object" ? Object.assign({},attrs[attr]) : {};
     model.attr(attr,options)
   }
   return model;
