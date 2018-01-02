@@ -1,8 +1,8 @@
 {
   "name": "udev-model-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript support for udev model, using nodejs-model https://www.npmjs.com/package/nodejs-model",
-  "main": "index.js",
+  "main": "lib/udev-model-ts.js",
   "scripts": {
     "tslint": "node_modules/.bin/tslint \"src/**/*.ts\" -e \"**/test/**\" -p tslint.json",
     "tsc": "node_modules/.bin/tsc",
